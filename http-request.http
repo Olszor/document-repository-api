@@ -1,0 +1,45 @@
+###
+POST http://localhost:8080/api/document/add
+Content-Type: application/json
+
+{
+  "document": {
+    "name": "Dokument"
+  },
+  "version": {
+    "version": "1.0",
+    "dateOfCreation": "2021-02-24",
+    "locationOfFile" : "E:\\Nowy folder"
+  }
+}
+
+###
+
+POST http://localhost:8080/api/add/version/1
+Content-Type: application/json
+
+{
+  "version": "1.1",
+  "dateOfCreation": "2021-02-27",
+  "locationOfFile" : "E:\\Nowy folder"
+}
+
+###
+
+POST http://localhost:8080/api/auth/signup
+Content-Type: application/json
+
+{
+  "username": "admin",
+  "password": "admin",
+  "roles": [
+    "ROLE_VIEW_USERS",
+    "ROLE_ADD_USERS",
+    "ROLE_EDIT_USERS",
+    "ROLE_DELETE_USERS",
+    "ROLE_VIEW_DOCUMENTS",
+    "ROLE_ADD_DOCUMENTS",
+    "ROLE_EDIT_DOCUMENTS",
+    "ROLE_DELETE_DOCUMENTS"
+  ]
+}
